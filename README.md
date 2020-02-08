@@ -29,6 +29,19 @@ in the table
 
 **random**: randomly add/del 300k words (same seed for reproducibility)
 
+For reference, these are the results with my (old) laptop:
+
+```
+    type \ operation |    add |    get |    del | re-add | random
+            chaining |    118 |     50 |     33 |     67 |    269
+             2choice |    184 |     79 |     47 |    117 |    382
+              linear |     73 |     24 |     23 |     42 |    186
+           quadratic |     77 |     29 |     27 |     49 |    199
+         double hash |     88 |     33 |     32 |     55 |    210
+           coalesced |    101 |     26 |     27 |     33 |    167
+              cuckoo |    114 |     27 |     28 |     53 |    195
+           hopscotch |    158 |     29 |     30 |     86 |    244
+```
 ## test/
 
 directory containing programs for unit testing
